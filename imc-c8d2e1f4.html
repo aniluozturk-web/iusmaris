@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSVP · Ius Maris Climaticum</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .rsvp-section {
+    background: var(--paper-cool);
+    padding: 96px 40px 140px;
+  }
+  .rsvp-inner {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+  .rsvp-intro {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 0 18px 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .rsvp-intro:last-of-type {
+    margin-bottom: 72px;
+  }
+  .rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .rsvp-form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .rsvp-form .field-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.36em;
+    color: #2F6670;
+    margin: 0 0 6px 0;
+    font-weight: 500;
+  }
+  .rsvp-form .field-label {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 21px;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.35;
+    letter-spacing: 0.005em;
+  }
+  .rsvp-form .field-label .opt {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-left: 10px;
+    letter-spacing: 0;
+  }
+  .rsvp-form .field-help {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.55;
+  }
+  .rsvp-form input[type="text"],
+  .rsvp-form input[type="email"],
+  .rsvp-form textarea,
+  .rsvp-form select {
+    background: transparent;
+    border: 0;
+    border-bottom: 0.5px solid var(--rule);
+    padding: 12px 0;
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    color: var(--ink);
+    width: 100%;
+    transition: border-color 0.2s;
+    border-radius: 0;
+    margin-top: 4px;
+  }
+  .rsvp-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%232F6670' stroke-width='1' d='M1 1l5 5 5-5'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    padding-right: 24px;
+    cursor: pointer;
+  }
+  .rsvp-form input:focus,
+  .rsvp-form textarea:focus,
+  .rsvp-form select:focus {
+    outline: none;
+    border-bottom-color: #2F6670;
+  }
+  .rsvp-form textarea {
+    resize: vertical;
+    min-height: 64px;
+  }
+  .submit-row {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 0.5px solid var(--rule);
+    text-align: right;
+  }
+  .rsvp-form button {
+    background: var(--ink);
+    color: var(--paper-cool);
+    border: 0;
+    padding: 16px 56px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .rsvp-form button:hover {
+    background: #2F6670;
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="corner tr">8 — 9 June 2026</div>
+  <nav class="nav">
+    <a href="home.html">Home</a>
+    <a href="programme.html">Programme</a>
+    <a href="participants.html">Convenors &amp; Participants</a>
+    <a href="practical.html">Practical</a>
+  </nav>
+  <div class="ph-inner">
+    <div class="ph-eyebrow" style="color: #2F6670;">— A Short Form Ahead of the Workshop —</div>
+    <h1 class="ph-title">RSVP</h1>
+    <p class="ph-sub">Dietary requirements, photography, and the dinner on 8 June.</p>
+  </div>
+</header>
+
+<section class="rsvp-section">
+  <div class="rsvp-inner">
+
+    <p class="rsvp-intro">
+      We would be most grateful if you could complete the short form below at your earliest convenience. The form gathers three short matters we need in advance of the workshop: your dietary requirements for the catering across both days, your preference on photography during the proceedings, and the dinner on the evening of 8 June.
+    </p>
+    <p class="rsvp-intro">
+      A dinner is being organised for the evening of 8 June, following the close of Day 1, and we would be very glad of your company. Please note that the cost of the dinner itself is not covered by the workshop. The convenors will book the table and confirm the restaurant in good time.
+    </p>
+
+    <form class="rsvp-form" action="https://formspree.io/f/mdajrwkn" method="POST" autocomplete="on">
+      <input type="hidden" name="_subject" value="Ius Maris Climaticum RSVP (dinner not covered)">
+      <input type="hidden" name="_next" value="https://iusmaris.com/imc-3e7d4b9a.html">
+
+      <div class="field">
+        <div class="field-num">01</div>
+        <label class="field-label" for="rsvp-name">Your full name, as you would like it to appear in our records</label>
+        <input id="rsvp-name" name="name" type="text" required autocomplete="name">
+      </div>
+
+      <div class="field">
+        <div class="field-num">02</div>
+        <label class="field-label" for="rsvp-email">The email address at which we can reach you on workshop matters</label>
+        <input id="rsvp-email" name="email" type="email" required autocomplete="email">
+      </div>
+
+      <div class="field">
+        <div class="field-num">03</div>
+        <label class="field-label" for="rsvp-dietary">Do you have any dietary requirements we should know of?</label>
+        <p class="field-help">Your requirements will apply across all catering arranged for the workshop, including the lunches, coffee breaks, and the dinner on the evening of 8 June.</p>
+        <select id="rsvp-dietary" name="dietary" required>
+          <option value="" disabled selected>Please choose</option>
+          <option value="No restrictions">No, no restrictions</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Gluten-free">Gluten-free</option>
+          <option value="Other">Other (please specify in the next field)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <div class="field-num">04</div>
+        <label class="field-label" for="rsvp-allergies">Any allergies or further dietary notes <span class="opt">optional</span></label>
+        <p class="field-help">Please flag any food allergies, religious requirements, intolerances, or anything else the kitchen should know in advance.</p>
+        <textarea id="rsvp-allergies" name="allergies" rows="2"></textarea>
+      </div>
+
+      <div class="field">
+        <div class="field-num">05</div>
+        <label class="field-label" for="rsvp-photo">Do you consent to being photographed during the workshop?</label>
+        <p class="field-help">A professional photographer will be present across both days. Photographs may be used on the workshop website, in academic communications about the event, and in any open-access volume that follows. Individuals will not be tagged by name without their further consent.</p>
+        <select id="rsvp-photo" name="photo_consent" required>
+          <option value="" disabled selected>Please choose</option>
+          <option value="Yes, I consent">Yes, I consent</option>
+          <option value="No, I do not consent">No, I do not consent</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <div class="field-num">06</div>
+        <label class="field-label" for="rsvp-dinner">Will you join us for the dinner on the evening of 8 June?</label>
+        <p class="field-help">The dinner follows the close of Day 1. Please note that the cost of the dinner is not covered by the workshop. The convenors will book the table and confirm the restaurant in advance.</p>
+        <select id="rsvp-dinner" name="dinner" required>
+          <option value="" disabled selected>Please choose</option>
+          <option value="Yes, I will join">Yes, I will join</option>
+          <option value="No, I will not be able to join">No, I will not be able to join</option>
+        </select>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logos">
+    <div class="footer-logo-cell">
+      <span class="role">Organised by</span>
+      <img class="logo-lu" src="assets/lu-jurfak.png" alt="Faculty of Law, Lund University">
+    </div>
+    <div class="footer-logo-cell right">
+      <span class="role">In collaboration with</span>
+      <img class="logo-wmu" src="assets/wmu-logo.png" alt="World Maritime University, Malmö">
+    </div>
+  </div>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>About</h4>
+      <p>A reading of the 2024 and 2025 climate advisory opinions of ITLOS, the ICJ, and the Inter-American Court of Human Rights, against the practice of maritime law. Held over two days in Lund and Malmö.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Funded by</h4>
+      <span class="funder-name">The Rune and Lena Lavin Foundation for Legal Research</span>
+    </div>
+    <div class="footer-col">
+      <h4>Auspices</h4>
+      <p>Organised in part under the auspices of the research project <em>Sustainable Carbon Capture, Transportation and Storage: Liability and Governance in Light of International and EU Law</em>.</p>
+      <a href="https://ccslaw.blogg.lu.se">ccslaw.blogg.lu.se</a>
+      <div class="mmw-inline">
+        <img src="assets/mmw-logo-cream.png" alt="Marianne and Marcus Wallenberg Foundation">
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
