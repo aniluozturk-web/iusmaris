@@ -1,40 +1,41 @@
-# iusmaris.com — Preview (password-protected)
+# iusmaris.com
 
-This is the **preview version** of the Ius Maris Climaticum website, sitting behind a soft password gate so the convenors and invitees can review the programme before public launch.
-
-## Password
-
-The inscription reads *"Speak, friend, and enter."* The gate accepts any of:
-
-```
-friendship
-friend
-mellon
-```
-
-(Case-insensitive.) The intended password to share with invitees is **friendship**. The other two are quiet concessions to anyone who recognises the riddle and answers it directly — "friend" being the English answer, "mellon" the Sindarin original on the Doors of Durin.
-
-## How the gate works
-
-`index.html` is the password page. On correct entry, it sets a `localStorage` flag (`imc-preview-access = granted`) and redirects to `home.html` (the actual landing page). All four content pages (`home.html`, `programme.html`, `participants.html`, `practical.html`) check that flag at the top of the document and redirect back to the gate if it's missing.
-
-The gate is **client-side only** — the password string lives in `index.html`'s `<script>` block. It's a soft barrier, suitable for an invitation-only preview. It is not, and is not intended to be, cryptographic protection.
-
-## When the workshop is ready to go public
-
-Replace the contents of the GitHub repository with the contents of the sibling `05_Website/` folder (which has no gate and no auth checks). That will be the public launch state.
+Static website for **Ius Maris Climaticum** — a closed workshop on the 2024 and 2025 climate advisory opinions, against the practice of maritime law. Lund and Malmö, 8–9 June 2026.
 
 ## Structure
 
 ```
 .
-├── index.html         The password gate
-├── home.html          Home page (formerly index.html in the public site)
-├── programme.html
-├── participants.html
-├── practical.html
-├── style.css
-├── assets/
-├── CNAME              Custom domain for GitHub Pages
+├── index.html         Home (hero + lede)
+├── programme.html     Two-day programme, four sessions, fourteen papers
+├── participants.html  Bios — to be added
+├── practical.html     Venue, travel, accommodation — to be added
+├── style.css          Shared stylesheet
+├── assets/            Logos (LU Faculty of Law, WMU, MMW)
 └── README.md
 ```
+
+## Stack
+
+Static HTML + CSS. No build step. Fonts loaded from Google Fonts:
+
+- **Cormorant** — display serif (title, session names)
+- **Source Serif 4** — body
+- **JetBrains Mono** — small caps, labels, times
+
+## Deployment
+
+Drop the contents of this folder onto any static host (GitHub Pages, Netlify, Vercel, S3). The domain `iusmaris.com` should resolve to whichever host you choose.
+
+For GitHub Pages: push this folder to `main` and enable Pages from the repo settings.
+
+## Design notes
+
+The visual language is a hybrid: dark navy canvas with a faint nautical grid for the hero and footer ("Monument + Atlas"), shifting to a warm cream paper canvas for body content ("Manuscript"). The dark band returns at the foot of the page as a closing register that also carries the institutional credits.
+
+Hierarchy:
+
+- **Organised by** the Faculty of Law, Lund University
+- **In collaboration with** the World Maritime University, Malmö
+- **Funded by** the Rune and Lena Lavin Foundation for Legal Research
+- **Auspices** in part of the CCSlaw project (Lund), funded by the Marianne and Marcus Wallenberg Foundation

@@ -12,7 +12,8 @@
 <style>
   .rsvp-section {
     background: var(--paper-cool);
-    padding: 96px 40px 140px;
+    padding: 64px 40px 96px;
+    border-top: 6px solid #9A6A2E;
   }
   .rsvp-inner {
     max-width: 660px;
@@ -29,12 +30,12 @@
     -webkit-hyphens: auto;
   }
   .rsvp-intro:last-of-type {
-    margin-bottom: 72px;
+    margin-bottom: 56px;
   }
   .rsvp-form {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 36px;
   }
   .rsvp-form .field {
     display: flex;
@@ -54,7 +55,7 @@
     font-style: italic;
     font-weight: 400;
     font-size: 21px;
-    color: var(--ink);
+    color: var(--ink-warm);
     margin: 0;
     line-height: 1.35;
     letter-spacing: 0.005em;
@@ -85,7 +86,7 @@
     padding: 12px 0;
     font-family: 'Source Serif 4', serif;
     font-size: 17px;
-    color: var(--ink);
+    color: var(--ink-warm);
     width: 100%;
     transition: border-color 0.2s;
     border-radius: 0;
@@ -111,26 +112,39 @@
     min-height: 64px;
   }
   .submit-row {
-    margin-top: 32px;
-    padding-top: 32px;
+    margin-top: 16px;
+    padding-top: 28px;
     border-top: 0.5px solid var(--rule);
-    text-align: right;
+    text-align: center;
   }
   .rsvp-form button {
-    background: var(--ink);
+    background: var(--ink-warm);
     color: var(--paper-cool);
     border: 0;
-    padding: 16px 56px;
+    padding: 18px 72px;
     cursor: pointer;
     font-family: 'JetBrains Mono', monospace;
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.28em;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     transition: background 0.2s;
   }
   .rsvp-form button:hover {
     background: var(--accent);
+  }
+  @media (max-width: 640px) {
+    .rsvp-section {
+      padding: 48px 24px 80px;
+    }
+    .rsvp-form .field-label {
+      font-size: 18px;
+      line-height: 1.3;
+    }
+    .rsvp-form button {
+      width: 100%;
+      padding: 20px;
+    }
   }
 </style>
 </head>
@@ -139,7 +153,7 @@
 <header class="page-header">
   <div class="corner tr">8 — 9 June 2026</div>
   <nav class="nav">
-    <a href="home.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="programme.html">Programme</a>
     <a href="participants.html">Convenors &amp; Participants</a>
     <a href="practical.html">Practical</a>
