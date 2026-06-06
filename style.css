@@ -467,6 +467,31 @@ body { min-height: 100vh; overflow-x: hidden; }
 }
 .note-line strong { font-style: normal; color: var(--ink-warm); font-weight: 500; }
 
+/* Co-author asterisk on the programme page. */
+.coauthor-mark {
+  font-family: 'Source Serif 4', serif;
+  color: var(--accent);
+  font-size: 0.7em;
+  vertical-align: super;
+  font-weight: 500;
+  margin-left: 2px;
+  line-height: 0;
+}
+.paper-footnote {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+.paper-footnote sup {
+  color: var(--accent);
+  font-size: 0.9em;
+  margin-right: 3px;
+}
+
 /* Contact form — formal academic register, italic serif labels. */
 .contact-form-intro {
   font-family: 'Source Serif 4', serif; font-style: italic;
