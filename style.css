@@ -495,9 +495,18 @@ body { min-height: 100vh; overflow-x: hidden; }
 /* Contact form — formal academic register, italic serif labels. */
 .contact-form-intro {
   font-family: 'Source Serif 4', serif; font-style: italic;
-  font-size: 16px; line-height: 1.65; color: var(--ink-soft);
-  text-align: center; max-width: 620px; margin: 0 auto 48px;
+  font-size: 16.5px; line-height: 1.7; color: var(--ink-soft);
+  text-align: left; max-width: 720px;
+  margin: 0 auto;
 }
+.contact-form-intro + .contact-form-intro {
+  margin-top: 1.1em;            /* clear paragraph break, ~one line of breathing room */
+}
+.contact-form-intro:last-of-type {
+  margin-bottom: 52px;          /* clear separation from the form below */
+}
+/* Subtle indent on the second paragraph would over-design here;
+   instead let the inter-paragraph gap carry the break. */
 .contact-form {
   max-width: 720px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 36px 36px;

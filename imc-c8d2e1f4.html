@@ -154,6 +154,58 @@
       padding: 20px;
     }
   }
+
+  /* Closed-state notice */
+  .closed-notice {
+    max-width: 560px;
+    margin: 24px auto 8px;
+    text-align: center;
+    padding: 56px 32px 60px;
+    border: 0.5px solid var(--rule);
+    background: rgba(255, 255, 255, 0.35);
+  }
+  .closed-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: #2F6670;
+    margin: 0 0 22px 0;
+    font-weight: 500;
+  }
+  .closed-title {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.2;
+    color: var(--ink-warm);
+    margin: 0 0 6px 0;
+    letter-spacing: 0.005em;
+  }
+  .closed-rule {
+    width: 56px;
+    height: 0.5px;
+    background: #2F6670;
+    margin: 22px auto 24px;
+    border: 0;
+  }
+  .closed-body {
+    font-family: 'Source Serif 4', serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0 auto;
+    max-width: 440px;
+  }
+  .closed-body + .closed-body {
+    margin-top: 14px;
+  }
+  @media (max-width: 640px) {
+    .closed-notice { padding: 44px 22px 48px; }
+    .closed-title { font-size: 30px; }
+    .closed-body { font-size: 15.5px; }
+  }
 </style>
 </head>
 <body>
@@ -167,85 +219,23 @@
     <a href="practical.html">Practical</a>
   </nav>
   <div class="ph-inner">
-    <div class="ph-eyebrow" style="color: #2F6670;">— A Short Form Ahead of the Workshop —</div>
+    <div class="ph-eyebrow" style="color: #2F6670;">— Registration is Now Closed —</div>
     <h1 class="ph-title">RSVP</h1>
-    <p class="ph-sub">Dietary requirements, photography, and the dinner on 8 June.</p>
+    <p class="ph-sub">With thanks to all who replied ahead of the workshop.</p>
   </div>
 </header>
 
 <section class="rsvp-section">
   <div class="rsvp-inner">
 
-    <p class="rsvp-intro">
-      We would be most grateful if you could complete the short form below at your earliest convenience. The form gathers three short matters we need in advance of the workshop: your dietary requirements for the catering across both days, your preference on photography during the proceedings, and the dinner on the evening of 8 June.
-    </p>
-    <p class="rsvp-intro">
-      A dinner is being organised for the evening of 8 June, following the close of Day 1, and we would be very glad of your company. Please note that <span class="notice">the cost of the dinner itself is not covered by the workshop</span>. The convenors will book the table and confirm the restaurant in good time.
-    </p>
+    <div class="closed-notice">
+      <div class="closed-eyebrow">Registration · Closed</div>
+      <h2 class="closed-title">Thank you for your interest.</h2>
+      <hr class="closed-rule">
+      <p class="closed-body">Replies have been received in good time and arrangements for the workshop are now in hand. We are grateful to everyone who responded.</p>
+      <p class="closed-body">For any further matter, please write to the convenors directly.</p>
+    </div>
 
-    <form class="rsvp-form" action="https://formspree.io/f/mdajrwkn" method="POST" autocomplete="on">
-      <input type="hidden" name="_subject" value="Ius Maris Climaticum RSVP (dinner not covered)">
-      <input type="hidden" name="_next" value="https://iusmaris.com/imc-3e7d4b9a.html">
-
-      <div class="field">
-        <div class="field-num">01</div>
-        <label class="field-label" for="rsvp-name">Your full name, as you would like it to appear in our records</label>
-        <input id="rsvp-name" name="name" type="text" required autocomplete="name">
-      </div>
-
-      <div class="field">
-        <div class="field-num">02</div>
-        <label class="field-label" for="rsvp-email">The email address at which we can reach you on workshop matters</label>
-        <input id="rsvp-email" name="email" type="email" required autocomplete="email">
-      </div>
-
-      <div class="field">
-        <div class="field-num">03</div>
-        <label class="field-label" for="rsvp-dietary">Do you have any dietary requirements we should know of?</label>
-        <p class="field-help">Your requirements will apply across all catering arranged for the workshop, including the lunches, coffee breaks, and the dinner on the evening of 8 June.</p>
-        <select id="rsvp-dietary" name="dietary" required>
-          <option value="" disabled selected>Please choose</option>
-          <option value="No restrictions">No, no restrictions</option>
-          <option value="Vegetarian">Vegetarian</option>
-          <option value="Vegan">Vegan</option>
-          <option value="Gluten-free">Gluten-free</option>
-          <option value="Other">Other (please specify in the next field)</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <div class="field-num">04</div>
-        <label class="field-label" for="rsvp-allergies">Any allergies or further dietary notes <span class="opt">optional</span></label>
-        <p class="field-help">Please flag any food allergies, religious requirements, intolerances, or anything else the kitchen should know in advance.</p>
-        <textarea id="rsvp-allergies" name="allergies" rows="2"></textarea>
-      </div>
-
-      <div class="field">
-        <div class="field-num">05</div>
-        <label class="field-label" for="rsvp-photo">Do you consent to being photographed during the workshop?</label>
-        <p class="field-help">A professional photographer will be present across both days. Photographs may be used on the workshop website, in academic communications about the event, and in any open-access volume that follows. Individuals will not be tagged by name without their further consent.</p>
-        <select id="rsvp-photo" name="photo_consent" required>
-          <option value="" disabled selected>Please choose</option>
-          <option value="Yes, I consent">Yes, I consent</option>
-          <option value="No, I do not consent">No, I do not consent</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <div class="field-num">06</div>
-        <label class="field-label" for="rsvp-dinner">Will you join us for the dinner on the evening of 8 June?</label>
-        <p class="field-help">The dinner follows the close of Day 1. Please note that <span class="notice">the cost of the dinner is not covered by the workshop</span>. The convenors will book the table and confirm the restaurant in advance.</p>
-        <select id="rsvp-dinner" name="dinner" required>
-          <option value="" disabled selected>Please choose</option>
-          <option value="Yes, I will join">Yes, I will join</option>
-          <option value="No, I will not be able to join">No, I will not be able to join</option>
-        </select>
-      </div>
-
-      <div class="submit-row">
-        <button type="submit">Send</button>
-      </div>
-    </form>
   </div>
 </section>
 
