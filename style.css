@@ -355,6 +355,31 @@ body { min-height: 100vh; overflow-x: hidden; }
   font-family: 'Source Serif 4', serif; font-style: italic;
   color: var(--muted); font-size: 14px; line-height: 1.5;
 }
+.bio-side .bio-links {
+  display: flex; flex-direction: column;
+  gap: 6px; margin-top: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.bio-side .bio-links a {
+  color: var(--accent); text-decoration: none;
+  border-bottom: 0.5px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.18s ease, color 0.18s ease;
+  display: inline-flex; align-items: baseline; gap: 6px;
+  width: max-content;
+}
+.bio-side .bio-links a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--ink-warm);
+}
+.bio-side .bio-links .arr {
+  font-family: 'Source Serif 4', serif; font-size: 11px;
+  letter-spacing: 0; color: var(--accent-soft);
+  transform: translateY(-1px);
+}
+.bio-side .bio-links a:hover .arr { color: var(--accent); }
 .bio-text {
   font-family: 'Source Serif 4', serif; font-size: 15.5px;
   line-height: 1.72; color: var(--ink-soft);
@@ -610,6 +635,19 @@ footer { background: var(--ink-deep); color: var(--paper-cool); padding: 96px 80
   border-top: 1px solid rgba(201, 164, 92, 0.14);
 }
 .footer-col .mmw-inline img { max-height: 24px; opacity: 0.9; display: block; }
+
+/* Copyright line at the very bottom of the dark footer. */
+.footer-copyright {
+  max-width: 1200px;
+  margin: 72px auto 0;
+  padding-top: 28px;
+  border-top: 0.5px solid rgba(201, 164, 92, 0.16);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(239, 228, 204, 0.4);
+  text-align: center;
+}
 
 /* ============================================================ RESPONSIVE ===
    Tablet (≤1000px) and phone (≤640px) breakpoints. */
