@@ -636,17 +636,50 @@ footer { background: var(--ink-deep); color: var(--paper-cool); padding: 96px 80
 }
 .footer-col .mmw-inline img { max-height: 24px; opacity: 0.9; display: block; }
 
-/* Copyright line at the very bottom of the dark footer. */
+/* Copyright lines at the very bottom of the dark footer.
+   Two-line split: design (Anıl), event (Lund + WMU), content (authors). */
 .footer-copyright {
   max-width: 1200px;
   margin: 72px auto 0;
   padding-top: 28px;
   border-top: 0.5px solid rgba(201, 164, 92, 0.16);
   font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+.footer-copyright .fc-design {
   font-size: 11px;
   letter-spacing: 0.04em;
-  color: rgba(239, 228, 204, 0.4);
-  text-align: center;
+  color: rgba(239, 228, 204, 0.55);
+  margin-bottom: 6px;
+}
+.footer-copyright .fc-design a {
+  color: inherit;
+  text-decoration: none;
+  background: transparent;
+  font: inherit;
+  letter-spacing: inherit;
+}
+.footer-copyright .fc-design a:hover,
+.footer-copyright .fc-design a:focus {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 0.5px;
+}
+.footer-copyright .fc-event {
+  font-size: 10.5px;
+  letter-spacing: 0.03em;
+  color: rgba(239, 228, 204, 0.32);
+  line-height: 1.55;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.footer-copyright .fc-content {
+  font-size: 10.5px;
+  letter-spacing: 0.03em;
+  color: rgba(239, 228, 204, 0.32);
+  line-height: 1.55;
+  margin-top: 8px;
 }
 
 /* ============================================================ RESPONSIVE ===
