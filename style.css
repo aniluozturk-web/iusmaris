@@ -652,17 +652,19 @@ footer { background: var(--ink-deep); color: var(--paper-cool); padding: 96px 80
   color: rgba(239, 228, 204, 0.55);
   margin-bottom: 6px;
 }
-.footer-copyright .fc-design a {
-  color: inherit;
-  text-decoration: none;
+.footer-copyright .fc-design a,
+.footer-copyright .fc-design a:link,
+.footer-copyright .fc-design a:visited {
+  color: rgba(239, 228, 204, 0.55) !important;
+  text-decoration: none !important;
   background: transparent;
   font: inherit;
   letter-spacing: inherit;
 }
 .footer-copyright .fc-design a:hover,
 .footer-copyright .fc-design a:focus {
-  color: var(--gold);
-  text-decoration: underline;
+  color: var(--gold) !important;
+  text-decoration: underline !important;
   text-underline-offset: 3px;
   text-decoration-thickness: 0.5px;
 }
